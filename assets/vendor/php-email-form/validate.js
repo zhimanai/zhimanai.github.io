@@ -1,81 +1,51 @@
-/**
-* PHP Email Form Validation - v3.9
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
 (function () {
   "use strict";
 
+  // 选择所有具有 `php-email-form` 类的表单
   let forms = document.querySelectorAll('.php-email-form');
 
-  forms.forEach( function(e) {
+  // 为每个表单添加提交事件监听
+  forms.forEach(function(e) {
     e.addEventListener('submit', function(event) {
-      event.preventDefault();
+      event.preventDefault();  // 阻止表单的默认提交行为
 
       let thisForm = this;
 
-      let action = thisForm.getAttribute('action');
-      let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
-      
-      if( ! action ) {
-        displayError(thisForm, 'The form action property is not set!');
-        return;
-      }
+      // 显示加载动画，隐藏错误和发送成功消息
       thisForm.querySelector('.loading').classList.add('d-block');
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
 
-      let formData = new FormData( thisForm );
+      // 使用 FormData 收集表单数据
+      let formData = new FormData(thisForm);
 
-      if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
-          grecaptcha.ready(function() {
-            try {
-              grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
-              .then(token => {
-                formData.set('recaptcha-response', token);
-                php_email_form_submit(thisForm, action, formData);
-              })
-            } catch(error) {
-              displayError(thisForm, error);
-            }
-          });
-        } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
-        }
-      } else {
-        php_email_form_submit(thisForm, action, formData);
-      }
+      // 初始化 EmailJS
+      emailjs.init("o6SqUdIqlrNHfCYgk");  // 替换为你的 EmailJS 用户 ID
+
+      // 创建要发送的邮件数据对象
+      let emailData = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
+
+      //发送邮件
+      emailjs.send("service_57v9zkt", "template_tgzpuee", emailData)
+        .then(function(response) {
+          // 成功时隐藏加载动画并显示发送成功消息
+          thisForm.querySelector('.loading').classList.remove('d-block');
+          thisForm.querySelector('.sent-message').classList.add('d-block');
+          thisForm.reset();  // 重置表单
+        }, function(error) {
+          // 出错时隐藏加载动画并显示错误消息
+          thisForm.querySelector('.loading').classList.remove('d-block');
+          displayError(thisForm, '邮件发送失败，请稍后再试');
+        });
     });
   });
 
-  function php_email_form_submit(thisForm, action, formData) {
-    fetch(action, {
-      method: 'POST',
-      body: formData,
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
-    })
-    .then(response => {
-      if( response.ok ) {
-        return response.text();
-      } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
-      }
-    })
-    .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
-      } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
-      }
-    })
-    .catch((error) => {
-      displayError(thisForm, error);
-    });
-  }
-
+  // 错误处理函数
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
