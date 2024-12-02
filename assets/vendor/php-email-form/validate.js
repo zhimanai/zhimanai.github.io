@@ -40,7 +40,7 @@
         }, function(error) {
           // 出错时隐藏加载动画并显示错误消息
           thisForm.querySelector('.loading').classList.remove('d-block');
-          displayError(thisForm, 'Email sending failed, please try again later');
+          displayError(thisForm, '邮件发送失败，请稍后再试');
         });
     });
   });
