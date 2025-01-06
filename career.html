@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>首个中文半导体大模型：知满科技ZhimanSemi生态正式发布</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: FlexStart
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <style>
+        .job-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-header {
+            padding: 20px;
+            background: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .job-header h3 {
+            margin: 0;
+            color: #012970;
+            font-size: 20px;
+        }
+        
+        .job-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #f8f9fa;
+        }
+        
+        .job-content.active {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        
+        .job-details {
+            padding: 20px;
+        }
+        
+        .job-details h4 {
+            color: #012970;
+            margin-bottom: 15px;
+        }
+        
+        .job-details ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .job-details ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .job-details ul li:before {
+            content: "\F633";
+            font-family: "bootstrap-icons";
+            position: absolute;
+            left: 0;
+            color: #4154f1;
+        }
+        
+        .apply-btn {
+            display: inline-block;
+            background: #4154f1;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .apply-btn:hover {
+            background: #5969f3;
+            color: #fff;
+        }
+        
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="blog-details-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="assets/img/logo_en.png" alt="">
+                <h1 class="sitename"></h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <!-- <li><a href="#clients" class="active">客户案例<br></a></li> -->
+                    <li><a href="index.html">服务</a></li>
+                    <li><a href="index.html">产品</a></li>
+                    <li><a href="career.html">招聘</a></li>
+                    <li><a href="index.html">新闻</a></li>
+                    <li><a href="index.html">联系</a></li>
+
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted flex-md-shrink-0" href="#contact">预约演示</a>
+
+        </div>
+    </header>
+
+
+
+    <main class="main">
+
+
+
+
+
+        <section id="careers" class="section" style="margin-top: 80px;">
+            <div class="container " data-aos="fade-up">
+                <h2>公司介绍</h2>
+                <p>知满科技有限公司，专注于开发和部署本地化/私有化的大模型人工智能应用。AI共建企业新质生产力，重塑行业竞争力。产品和服务面向需要高度定制化AI解决方案的数据密集型企业，行业聚焦半导体设备，新能源，钢铁，煤炭，政务，财务。 </p>
+                <p>应聘者可把pdf/word版本简历附件发送至公司指定邮箱，邮件标题请注明应聘岗位及姓名 投递地址 ：career@zhiman.tech</p>
+            </div>
+
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Machine Learning Engineer -->
+                        <div class="job-card" data-aos="fade-up">
+                            <div class="job-header" onclick="toggleJob(this)">
+                                <h3>HRBP</h3>
+                                <i class="bi bi-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="job-content">
+                                <div class="job-details">
+                                    <br>
+                                    <h5>薪资和地点</h5>
+                                    <ul>
+                                        <li>10 - 15K；</li>
+                                        <li>上海/南京；</li>
+                                        <li>2. 职业晋升空间广阔，后期可专注于人事。</li>
+                                        <li>薪酬管理：管理员工考勤，月度薪酬核算及人员成本分析；</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>岗位描述</h5>
+                                    <ul>
+                                        <li>根据公司业务需要建立公司人力资源管理制度及流程；</li>
+                                        <li>基于岗位需求，独立负责招聘工作以满足公司发展需求；</li>
+                                        <li>员工关系管理，负责员工入离调转以及合同管理工作；</li>
+                                        <li>薪酬管理：管理员工考勤，月度薪酬核算及人员成本分析；</li>
+                                        <li>负责社保公积金业务办理；</li>
+                                        <li>负责职级体系搭建；</li>
+                                        <li>负责企业日常行政类事务，如办公用品采购、资产维护管理等；</li>
+                                        <li>负责领导的日常行程安排、会议预定，差旅预定，餐厅预定等；</li>
+                                        <li>商务运营和接待相关工作。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>职位要求</h5>
+                                    <ul>
+                                        <li>学历/专业：本科或以上学历（自考、专科等不考虑），人力资源管理或相关专业；</li>
+                                        <li>资历/经验：5年以上人力资源从业经验，2年及以上人工智能行业（大模型）人事工作经验优先；</li>
+                                        <li>知识/技能：熟悉劳动法、劳动合同法等相关法规，具备较强的法律意识和风险防范能力；</li>
+                                        <li>能力/素质：具备较强的沟通协调和团队合作能力、良好的沟通和写作能力，能够以清晰、简洁的语言进行有效的沟通。</li>
+                                        <li>有从0-1搭建团队经验优先；</li>
+                                        <li>熟悉GPT等AI辅助工具优先；</li>
+                                        <li>能适应外出的工作性质。</li>
+                                    </ul>
+                                    <br>
+
+                                    <a href="mailto:career@zhiman.tech" class="apply-btn">申请</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales Position -->
+                        <div class="job-card" data-aos="fade-up">
+                            <div class="job-header" onclick="toggleJob(this)">
+                                <h3>销售经理</h3>
+                                <i class="bi bi-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="job-content">
+                                <div class="job-details">
+                                    <br>
+                                    <h5>薪资和地点</h5>
+                                    <ul>
+                                        <li>10 - 13K；</li>
+                                        <li>上海/南京/北京。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>岗位描述</h5>
+                                    <ul>
+                                        <li>了解大模型的市场应用，负责向潜在客户传达大模型的产品优势和业务价值，分析并阐述与竞品的差异；</li>
+                                        <li>与客户建立有效沟通，探索客户需求；</li>
+                                        <li>负责销售过程中的简单演示、答疑；</li>
+                                        <li>制定并执行销售计划，完成销售目标和市场拓展任务；</li>
+                                        <li>开拓新客户，维护现有客户关系，提升客户满意度和忠诚度；</li>
+                                        <li>与跨部门团队协作，确保销售、市场和客户支持的协同效应。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>职位要求</h5>
+                                    <ul>
+                                        <li>具有3年以上的销售或客户管理经验，全日制本科或以上学历；</li>
+                                        <li>具备半导体行业背景和经验，熟悉半导体设备，了解先进制造行业；</li>
+                                        <li>有能力独立开拓市场，具备较强的销售和外勤工作能力；</li>
+                                        <li>具备出色的沟通和演示技巧，能够将复杂的技术概念以易懂的方式呈现给客户；</li>
+                                        <li>具有商务谈判和闭单的能力，能够独立完成销售过程；</li>
+                                        <li>具有良好的市场洞察力和分析能力，能够根据市场变化调整销售策略；</li>
+                                        <li>具备优秀的人际交往能力和团队合作精神，以结果为导向，能够在压力下工作；</li>
+                                        <li>有大型企业客户资源者优先，有成功的大模型或软件销售案例者优先。</li>
+                                    </ul>
+                                    <br>
+
+                                    <a href="mailto:career@zhiman.tech" class="apply-btn">申请</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales Position -->
+                        <div class="job-card" data-aos="fade-up">
+                            <div class="job-header" onclick="toggleJob(this)">
+                                <h3>全栈开发</h3>
+                                <i class="bi bi-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="job-content">
+                                <div class="job-details">
+                                    <br>
+                                    <h5>薪资和地点</h5>
+                                    <ul>
+                                        <li>12 - 24K；</li>
+                                        <li>上海。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>岗位描述</h5>
+                                    <ul>
+                                        <li>后端服务设计与优化：参与基于大语言模型（LLM）的应用后端服务设计、开发和优化，确保系统的高效运行和可扩展性。</li>
+                                        <li>创新型应用研发：主导或参与创新型应用的研发，探索和实现面向个人及企业的前沿应用，提升用户体验和市场竞争力。</li>
+                                        <li>后端系统开发与维护：负责后端系统的全面开发和日常维护，涵盖API接口设计、数据库架构、缓存策略等关键领域。</li>
+                                        <li>需求分析与架构设计：积极参与项目需求讨论，提供技术见解，参与系统架构设计，确保技术方案的合理性和前瞻性。</li>
+                                        <li>性能优化与稳定性保障：支持并优化系统性能，处理高并发请求，确保系统在高负载下的稳定运行。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>职位要求</h5>
+                                    <ul>
+                                        <li>具有3年以上的销售或客户管理经验，全日制本科或以上学历；</li>
+                                        <li>具备半导体行业背景和经验，熟悉半导体设备，了解先进制造行业；</li>
+                                        <li>有能力独立开拓市场，具备较强的销售和外勤工作能力；</li>
+                                        <li>具备出色的沟通和演示技巧，能够将复杂的技术概念以易懂的方式呈现给客户；</li>
+                                        <li>具有商务谈判和闭单的能力，能够独立完成销售过程；</li>
+                                        <li>具有良好的市场洞察力和分析能力，能够根据市场变化调整销售策略；</li>
+                                        <li>具备优秀的人际交往能力和团队合作精神，以结果为导向，能够在压力下工作；</li>
+                                        <li>有大型企业客户资源者优先，有成功的大模型或软件销售案例者优先。</li>
+                                    </ul>
+                                    <br>
+
+                                    <a href="mailto:career@zhiman.tech" class="apply-btn">申请</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales Position -->
+                        <div class="job-card" data-aos="fade-up">
+                            <div class="job-header" onclick="toggleJob(this)">
+                                <h3>算法工程师</h3>
+                                <i class="bi bi-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="job-content">
+                                <div class="job-details">
+                                    <br>
+                                    <h5>薪资和地点</h5>
+                                    <ul>
+                                        <li>15 - 30K；</li>
+                                        <li>上海/南京。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>岗位描述</h5>
+                                    <ul>
+                                        <li>主导大模型架构设计与选型，依据云端和私有化部署的不同特性，量身定制高效运行的模型方案。</li>
+                                        <li>深入开展模型训练优化工作，凭借对深度学习前沿技术的深刻理解，灵活运用超参数调整、创新预训练任务设定等手段，不断提升模型的准确性、召回率等关键指标，以满足不同行业客户的精准需求。</li>
+                                        <li>设计与开发数据采集与标注管线，保障数据与模型的完美适配。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>职位要求</h5>
+                                    <ul>
+                                        <li>本科及以上学历，计算机科学、数学、统计学等相关专业背景，具备扎实的数学基础和算法理论知识。</li>
+                                        <li>精通至少一种主流深度学习框架，如 TensorFlow 或 Transformer。</li>
+                                        <li>对大模型领域有浓厚兴趣，熟悉常见大模型架构及其应用场景，并有实际的大模型项目实践经验优先考虑。</li>
+                                    </ul>
+                                    <br>
+
+                                    <a href="mailto:career@zhiman.tech" class="apply-btn">申请</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales Position -->
+                        <div class="job-card" data-aos="fade-up">
+                            <div class="job-header" onclick="toggleJob(this)">
+                                <h3>B端/AI产品经理</h3>
+                                <i class="bi bi-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="job-content">
+                                <div class="job-details">
+                                    <br>
+                                    <h5>薪资和地点</h5>
+                                    <ul>
+                                        <li>12 - 17K；</li>
+                                        <li>上海。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>岗位描述</h5>
+                                    <ul>
+                                        <li>负责团队大模型应用项目的整体规划与设计，结合与研发团队共同制定方案，推动产品快速迭代与创新；</li>
+                                        <li>负责了解行业趋势、竞争态势和客户需求，收集和分析企业客户的反馈，识别产品改进和新功能的机会；</li>
+                                        <li>协调跨部门团队，包括研发、设计、市场、销售和客户支持，确保开发团队理解需求，以及项目按时交付；</li>
+                                        <li>制定产品路线图，明确产品发展方向和优先级，确定产品的核心价值和差异化竞争优势。</li>
+                                    </ul>
+                                    <br>
+
+                                    <h5>职位要求</h5>
+                                    <ul>
+                                        <li>本科及以上学历，STEM相关专业优先；</li>
+                                        <li>具备B端产品经验，能够独立完成重点项目的立项、执行和复盘；</li>
+                                        <li>有相关AI应用落地的经验，如LLM应用、智能体、搜索、微调等；</li>
+                                        <li>具备web端、移动端产品的原型设计能力，熟练使用Figma或墨刀等工具；；</li>
+                                        <li>具备AI产品经历，如LLM应用、智能体、搜索、微调等；</li>
+                                        <li>学习能力强，对LLM及相关前沿技术有深入理解。</li>
+                                    </ul>
+                                    <br>
+
+                                    <a href="mailto:career@zhiman.tech" class="apply-btn">申请</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            function toggleJob(element) {
+                const content = element.nextElementSibling;
+                const icon = element.querySelector('.toggle-icon');
+
+                content.classList.toggle('active');
+                icon.classList.toggle('rotate');
+            }
+        </script>
+
+    </main>
+
+    <footer id="footer" class="footer">
+
+        <!-- <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <span class="sitename">FlexStart</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4>Follow Us</h4>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <div class="social-links d-flex">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Zhiman Tech</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
